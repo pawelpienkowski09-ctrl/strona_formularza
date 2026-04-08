@@ -72,9 +72,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <p style="color: green;"> <?php echo $komunikat; ?> </p>
 
+    <div class="tabela-wiadomosci">
         <h2>Zapisane wiadomości</h2>
 
-        <table border="1" cellpadding="10">
+        <table>
             <tr>
                 <th>Imię</th>
                 <th>Nazwisko</th>
@@ -83,25 +84,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <th>Treść</th>
             </tr>
 
-    <?php
-        if (file_exists("dane.txt")) {
+            <?php
+            if (file_exists("dane.txt")) {
 
-            $linie = file("dane.txt");
+                $linie = file("dane.txt");
 
-            foreach ($linie as $linia) {
-                $dane = explode("|", trim($linia));
+                foreach ($linie as $linia) {
+                    $dane = explode("|", trim($linia));
 
-                if (count($dane) == 5) {
-                    echo "<tr>";
-                    foreach ($dane as $pole) {
-                        echo "<td>" . htmlspecialchars($pole) . "</td>";
+                    if (count($dane) == 5) {
+                        echo "<tr>";
+                        foreach ($dane as $pole) {
+                            echo "<td>" . htmlspecialchars($pole) . "</td>";
+                        }   
+                        echo "</tr>";
                     }
-                    echo "</tr>";
                 }
             }
-        }
-    ?>
+            ?>
         </table>
+    </div>
     </section>
     </main>
 

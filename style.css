@@ -64,3 +64,43 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.tabela-wiadomosci {
+    background: white;
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.tabela-wiadomosci:hover {
+    box-shadow: 0 25px 60px rgb(0, 0, 0);
+}
+
+.tabela-wiadomosci table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-wiadomosci th {
+    background: #22c55e;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+
+.tabela-wiadomosci td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.tabela-wiadomosci tr:hover {
+    background: #f3f4f6;
+}
+
+.tabela-wiadomosci h2 {
+    padding: 20px;
+}
