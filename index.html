@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiadomości</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Wyślij wiadomość</h1>
+    </header>
+
+    <main>
+        <section class="formularz">
+        <form method="POST">
+            <label for="imie">Imię:</label>
+            <input type="text" name="imie" id="imie" required>
+
+            <br> <br>
+
+            <label for="nazwisko">Nazwisko:</label>
+            <input type="text" name="nazwisko" id="nazwisko" required>
+
+            <br> <br>
+
+            <label for="mail">Email:</label>
+            <input type="email" name="mail" id="mail" required>
+
+            <br> <br>
+
+            <label for="temat">Temat:</label>
+            <input type="text" name="temat" id="temat" required>
+
+            <br> <br>
+
+            <label for="tresc">Treść wiadomości:</label>
+            <textarea name="tresc" id="tresc" rows="5" placeholder="Treść wiadomości..." required></textarea>
+
+            <br> <br>
+
+            <button type="submit">Wyślij</button>
+        </form>
+    </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Wiadomości. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+</body>
+</html>
